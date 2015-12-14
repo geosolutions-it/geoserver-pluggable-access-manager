@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <accessLimitsBuilders>
+        <builder id="test-builder">
+            <beanName>testAccessLimitsBuilder</beanName>
+        </builder>
+    </accessLimitsBuilders>
+    <rules>
+        <rule>
+            <workspace>cite</workspace>
+            <layer>RoadSegments</layer>
+            <accessLimitsBuilder>test-builder</accessLimitsBuilder>
+        </rule>
+    </rules>
+    <defaultAccessLimitsBuilder>
+        <beanName>denyAllAccessLimitsBuilder</beanName>
+    </defaultAccessLimitsBuilder>
+</config>

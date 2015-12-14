@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache maxBytesLocalHeap="150M">
+    <diskStore path="java.io.tmpdir"/>
+
+    <!-- timeToIdleSeconds - 30 minutes -->
+    <!-- timeToLiveSeconds - 1 hour -->
+    <cache name="permissions"
+          maxElementsInMemory="10000"
+          eternal="false"
+          timeToIdleSeconds="10"
+          timeToLiveSeconds="10"
+          overflowToDisk="false"
+          memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="raster_filters"
+          maxElementsInMemory="10000"
+          eternal="false"
+          timeToIdleSeconds="1800"
+          timeToLiveSeconds="3600"
+          overflowToDisk="false"
+          memoryStoreEvictionPolicy="LRU"/>
+
+    <!-- Mandatory Default Cache configuration. These settings will be applied 
+        to caches created programmtically using CacheManager.add(String cacheName) -->
+    <defaultCache maxElementsInMemory="10000" eternal="false"
+        timeToIdleSeconds="10" timeToLiveSeconds="10" overflowToDisk="true"
+        maxElementsOnDisk="10000000" diskPersistent="false"
+        diskExpiryThreadIntervalSeconds="120" memoryStoreEvictionPolicy="LRU" />
+</ehcache>

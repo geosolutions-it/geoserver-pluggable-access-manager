@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+    xmlns:util="http://www.springframework.org/schema/util">
+
+    <bean id="pluggableAccessManager"
+        class="it.geosolutions.geoserver.security.impl.PluggableAccessManager" />
+
+    <bean id="pluggableAccessManagerConfigurator"
+        class="it.geosolutions.geoserver.security.config.PluggableAccessManagerConfigurator">
+        <constructor-arg index="0" ref="pluggableAccessManager" />
+    </bean>
+
+    <!-- Access Limits Builders -->
+    <bean name="allowAllAccessLimitsBuilder"
+        class="it.geosolutions.geoserver.security.impl.ReadWriteAccessLimitsBuilder">
+        <property name="canRead" value="true" />
+        <property name="canWrite" value="true" />
+    </bean>
+    <bean name="denyAllAccessLimitsBuilder"
+        class="it.geosolutions.geoserver.security.impl.ReadWriteAccessLimitsBuilder">
+        <property name="canRead" value="false" />
+        <property name="canWrite" value="false" />
+    </bean>
+    <bean name="readOnlyAccessLimitsBuilder"
+        class="it.geosolutions.geoserver.security.impl.ReadWriteAccessLimitsBuilder">
+        <property name="canRead" value="true" />
+        <property name="canWrite" value="false" />
+    </bean>
+
+    <!-- Dispatcher to enable data security in GeoWebCache -->
+    <bean name="gwcDataSecurityDispatcher"
+        class="it.geosolutions.geoserver.security.gwc.dispatch.GwcDataSecurityDispatcher">
+        <property name="gwcDataSecurityEnabled" value="true" />
+        <property name="pluggableAccessManager" ref="pluggableAccessManager" />
+        <property name="secureCatalog" ref="secureCatalog"></property>
+    </bean>
+
+</beans>

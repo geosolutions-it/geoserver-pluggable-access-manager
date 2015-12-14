@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <accessLimitsBuilders>
+        <builder id="no-opt">
+            <beanName>noOptionsAccessLimitsBuilder</beanName>
+        </builder>
+        <builder id="allow-all">
+            <beanName>allowAllAccessLimitsBuilder</beanName>
+        </builder>
+        <builder id="cql">
+            <beanName>cqlFilterAccessLimitsBuilder</beanName>
+            <options>
+                <option name="cql_filter">FID IN ({0})</option>
+            </options>
+        </builder>
+    </accessLimitsBuilders>
+    <rules>
+        <rule>
+            <workspace>topp</workspace>
+            <layer>*</layer>
+            <accessLimitsBuilder>allow-all</accessLimitsBuilder>
+        </rule>
+        <!-- most specific rule wins -->
+        <rule>
+            <workspace>topp</workspace>
+            <layer>states</layer>
+            <accessLimitsBuilder>cql</accessLimitsBuilder>
+        </rule>
+        <!-- rule appearing last wins -->
+        <rule>
+            <workspace>topp</workspace>
+            <layer>*</layer>
+            <accessLimitsBuilder>no-opt</accessLimitsBuilder>
+        </rule>
+        <!-- match layer name in any workspace -->
+        <rule>
+            <workspace>*</workspace>
+            <layer>rivers</layer>
+            <accessLimitsBuilder>no-opt</accessLimitsBuilder>
+        </rule>
+    </rules>
+    <defaultAccessLimitsBuilder>
+        <beanName>defaultAccessLimitsBuilder</beanName>
+        <options>
+            <option name="option_1">value_1</option>
+            <option name="option_2">2</option>
+        </options>
+    </defaultAccessLimitsBuilder>
+    <catalogMode>CHALLENGE</catalogMode>
+</config>

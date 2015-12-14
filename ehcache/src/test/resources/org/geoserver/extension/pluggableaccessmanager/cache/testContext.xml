@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+    xmlns:util="http://www.springframework.org/schema/util">
+
+    <bean id="tmpDir" class="java.io.File">
+        <constructor-arg index="0" type="java.lang.String"
+            value="./target" />
+    </bean>
+
+    <!-- EhCache library setup -->
+    <bean id="ehcache" class="org.geoserver.extension.pluggableaccessmanager.ehcache.EhCacheManagerFactoryBean">
+        <constructor-arg index="0" ref="tmpDir" />
+    </bean>
+
+    <bean id="cacheManager"
+        class="org.springframework.cache.ehcache.EhCacheCacheManager">
+        <property name="cacheManager" ref="ehcache" />
+    </bean>
+
+</beans>

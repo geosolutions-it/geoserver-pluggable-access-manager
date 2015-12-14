@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+          http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-3.1.xsd">
+
+    <cache:annotation-driven proxy-target-class="true" />
+
+    <bean id="mockDataAccessProvider" class="org.geoserver.extension.pluggableaccessmanager.data.impl.MockDataAccessProvider" />
+
+    <bean id="cachingRasterFilterBuilder"
+        class="org.geoserver.extension.pluggableaccessmanager.security.impl.CachingRasterFilterBuilder" />
+
+    <bean id="cachingDataAccess"
+        class="org.geoserver.extension.pluggableaccessmanager.data.impl.CachingDataAccessAdapter">
+        <property name="provider" ref="mockDataAccessProvider" />
+    </bean>
+
+    <bean id="testAccessLimitsBuilder"
+        class="org.geoserver.extension.pluggableaccessmanager.security.impl.DataAccessLimitsBuilder">
+        <constructor-arg index="0" ref="cachingDataAccess" />
+        <constructor-arg index="1" ref="cachingRasterFilterBuilder" />
+    </bean>
+
+    <!-- cache configuration -->
+    <bean id="tmpDir" class="java.io.File">
+        <constructor-arg index="0" type="java.lang.String"
+            value="./target" />
+    </bean>
+
+    <bean id="ehcache" class="org.geoserver.extension.pluggableaccessmanager.ehcache.EhCacheManagerFactoryBean">
+        <constructor-arg index="0" ref="tmpDir" />
+    </bean>
+
+    <bean id="cacheManager"
+        class="org.springframework.cache.ehcache.EhCacheCacheManager">
+        <property name="cacheManager" ref="ehcache" />
+    </bean>
+    <!-- cache configuration - END -->
+
+</beans>

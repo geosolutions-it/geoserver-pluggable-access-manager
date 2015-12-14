@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <accessLimitsBuilders>
+        <builder id="no-opt">
+            <beanName>noOptionsAccessLimitsBuilder</beanName>
+        </builder>
+        <builder id="cql">
+            <beanName>cqlFilterAccessLimitsBuilder</beanName>
+            <options>
+                <option name="cql_filter">FID IN ({0})</option>
+            </options>
+        </builder>
+    </accessLimitsBuilders>
+    <rules>
+        <rule>
+            <workspace>topp</workspace>
+            <layer>*</layer>
+            <!-- configuration error: no access limits builder specified -->
+        </rule>
+    </rules>
+</config>
