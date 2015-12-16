@@ -1,0 +1,84 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-8a17a90:14cb2deb563:-7cb8</id>
+  <name>product_checksum</name>
+  <nativeName>product_checksum</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--55ab64b5:13cee442f0c:-7fff</id>
+  </namespace>
+  <title>product_checksum</title>
+  <keywords>
+    <string>product_checksum</string>
+    <string>features</string>
+  </keywords>
+  <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
+  DATUM[&quot;World Geodetic System 1984&quot;, 
+    SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], 
+  PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+  UNIT[&quot;degree&quot;, 0.017453292519943295], 
+  AXIS[&quot;Geodetic longitude&quot;, EAST], 
+  AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</nativeCRS>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>-4.17239856719971</minx>
+    <maxx>12.5453851996774</maxx>
+    <miny>34.7582397460938</miny>
+    <maxy>36.3451232910156</maxy>
+    <crs>EPSG:4326</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-180.0</minx>
+    <maxx>180.0</maxx>
+    <miny>-90.0</miny>
+    <maxy>90.0</maxy>
+    <crs>GEOGCS[&quot;WGS84(DD)&quot;, 
+  DATUM[&quot;WGS84&quot;, 
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], 
+  PRIMEM[&quot;Greenwich&quot;, 0.0], 
+  UNIT[&quot;degree&quot;, 0.017453292519943295], 
+  AXIS[&quot;Geodetic longitude&quot;, EAST], 
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>product_checksum</name>
+        <sql>select servicename,&#xd;
+       identifier,&#xd;
+       ST_SetSRID(ST_Extent(bbox),4326),&#xd;
+       time,&#xd;
+	   acq_plan_url,&#xd;
+       sum(numoilspill) as numoilspill,&#xd;
+       sum(numshipdetect) as numshipdetect,&#xd;
+       string_agg(DISTINCT layername, &apos;,&apos;) as layerlist,&#xd;
+       string_agg(DISTINCT variable, &apos;,&apos;) as variablelist,&#xd;
+       string_agg(DISTINCT sartype, &apos;,&apos;) as sartypelist,&#xd;
+       string_agg(DISTINCT outfilelocation, &apos;,&apos;) as filelist&#xd;
+from ingestionproducts join service on (ingestionproducts.servicename = service.&quot;SERVICE_ID&quot;)&#xd;
+group by servicename,&#xd;
+         identifier,&#xd;
+         time,&#xd;
+		 acq_plan_url
+</sql>
+        <escapeSql>false</escapeSql>
+        <geometry>
+          <name>st_setsrid</name>
+          <type>Polygon</type>
+          <srid>4326</srid>
+        </geometry>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--55ab64b5:13cee442f0c:-7ffe</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

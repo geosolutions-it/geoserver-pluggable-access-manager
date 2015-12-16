@@ -1,0 +1,15 @@
+<layer>
+  <name>ingestionproducts</name>
+  <id>LayerInfoImpl-8a17a90:14cb2deb563:-7bba</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-78ff667e:12476299803:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-8a17a90:14cb2deb563:-7bbb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

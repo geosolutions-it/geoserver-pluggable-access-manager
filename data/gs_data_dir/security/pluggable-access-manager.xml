@@ -1,0 +1,26 @@
+<config>
+  <accessLimitsBuilders>
+    <builder id="permission-filter">
+      <beanName>pluggableaccessmanagerAccessLimitsBuilder</beanName>
+      <options>
+	<option name="cql_filter_template">servicename IN ({0})</option>
+      </options>
+    </builder>
+  </accessLimitsBuilders>
+  <rules>
+    <rule>
+      <workspace>mariss</workspace>
+      <layer>product_checksum</layer>
+      <accessLimitsBuilder>permission-filter</accessLimitsBuilder>
+    </rule>
+    <rule>
+      <workspace>mariss</workspace>
+      <layer>ingestionproducts</layer>
+      <accessLimitsBuilder>permission-filter</accessLimitsBuilder>
+    </rule>
+  </rules>
+  <defaultAccessLimitsBuilder>
+    <beanName>allowAllAccessLimitsBuilder</beanName>
+  </defaultAccessLimitsBuilder>
+  <catalogMode>HIDE</catalogMode>
+</config>

@@ -1,0 +1,17 @@
+<settings>
+  <id>SettingsInfoImpl-2b97db76:145e2b880ac:-7ffb</id>
+  <workspace>
+    <id>WorkspaceInfoImpl--55ab64b5:13cee442f0c:-8000</id>
+    <name>mariss</name>
+  </workspace>
+  <contact>
+    <id>contact</id>
+    <contactOrganization>GeoSolutions S.A.S.</contactOrganization>
+  </contact>
+  <charset>UTF-8</charset>
+  <numDecimals>8</numDecimals>
+  <onlineResource>http://geoserver.org</onlineResource>
+  <verbose>false</verbose>
+  <verboseExceptions>false</verboseExceptions>
+  <localWorkspaceIncludesPrefix>false</localWorkspaceIncludesPrefix>
+</settings>

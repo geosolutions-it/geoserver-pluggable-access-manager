@@ -1,0 +1,12 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl-26428059:14f190da5c8:-7fc3</id>
+  <name>test</name>
+  <description>test</description>
+  <type>GeoTIFF</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--55ab64b5:13cee442f0c:-8000</id>
+  </workspace>
+  <__default>false</__default>
+  <url>file:///share/gs_ext_data/data/geotiffs/sar/_I_201522232_CSKS1_DGM_B_HI_24_HH_RD_FF_20150619164258_20150619164304_I__s_closeeye_s_201522232_CSKS1_DGM_B_HI_24_HH_RD_FF_20150619164258_20150619164304_geo5.tif</url>
+</coverageStore>

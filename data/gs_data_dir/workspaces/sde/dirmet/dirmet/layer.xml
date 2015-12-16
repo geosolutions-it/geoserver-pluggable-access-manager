@@ -1,0 +1,15 @@
+<layer>
+  <name>dirmet</name>
+  <id>LayerInfoImpl-6b0568e6:14ceb7536b2:-7540</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-6a6fcbc3:14d2076ff8a:-6b0e</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-6b0568e6:14ceb7536b2:-7541</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

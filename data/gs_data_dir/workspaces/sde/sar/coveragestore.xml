@@ -1,0 +1,11 @@
+<coverageStore>
+  <id>CoverageStoreInfoImpl-26428059:14f190da5c8:-7ffe</id>
+  <name>sar</name>
+  <type>ImageMosaic</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-7fe8985e:14ce290f6b0:-7c73</id>
+  </workspace>
+  <__default>false</__default>
+  <url>file:data/sde/sar</url>
+</coverageStore>

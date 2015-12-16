@@ -1,0 +1,23 @@
+<layer>
+  <name>ship_detections</name>
+  <id>LayerInfoImpl-6b0568e6:14ceb7536b2:-7c9c</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-6b0568e6:14ceb7536b2:-7c88</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-6b0568e6:14ceb7536b2:-7c88</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-6b0568e6:14ceb7536b2:-7c9d</id>
+  </resource>
+  <metadata>
+    <entry key="buffer">50</entry>
+  </metadata>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,15 @@
+<layer>
+  <name>ships</name>
+  <id>LayerInfoImpl-4b585f73:147026432cd:-7fe9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-64fa9b30:14701ec281e:-7f2f</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-4b585f73:147026432cd:-7fea</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

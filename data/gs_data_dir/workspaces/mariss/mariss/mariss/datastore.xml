@@ -1,0 +1,21 @@
+<dataStore>
+  <id>DataStoreInfoImpl--55ab64b5:13cee442f0c:-7ffe</id>
+  <name>mariss</name>
+  <type>PostGIS (JNDI)</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--55ab64b5:13cee442f0c:-8000</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="dbtype">postgis</entry>
+    <entry key="Loose bbox">true</entry>
+    <entry key="Expose primary keys">true</entry>
+    <entry key="encode functions">false</entry>
+    <entry key="preparedStatements">false</entry>
+    <entry key="jndiReferenceName">java:comp/env/jdbc/Mariss</entry>
+    <entry key="Estimated extends">true</entry>
+    <entry key="Support on the fly geometry simplification">false</entry>
+    <entry key="namespace">http://mariss.it</entry>
+  </connectionParameters>
+  <__default>false</__default>
+</dataStore>

@@ -1,0 +1,15 @@
+<layer>
+  <name>acq_list</name>
+  <id>LayerInfoImpl--37b907e6:1461c6f1170:-6083</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-78ff667e:12476299803:-7ff9</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--37b907e6:1461c6f1170:-6084</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

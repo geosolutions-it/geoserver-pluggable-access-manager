@@ -1,0 +1,15 @@
+<layer>
+  <name>wl</name>
+  <id>LayerInfoImpl-6b0568e6:14ceb7536b2:-755c</id>
+  <type>RASTER</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-629c7233:14d1efbf7e0:-75bc</id>
+  </defaultStyle>
+  <resource class="coverage">
+    <id>CoverageInfoImpl-6b0568e6:14ceb7536b2:-755d</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

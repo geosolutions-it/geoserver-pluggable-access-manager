@@ -1,0 +1,15 @@
+<layer>
+  <name>oil_spills</name>
+  <id>LayerInfoImpl-3d59d54:150d6cf320a:-7ef2</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-3d59d54:150d6cf320a:-7ef6</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-3d59d54:150d6cf320a:-7ef3</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,16 @@
+<layer>
+  <name>tem_sd__1p</name>
+  <id>LayerInfoImpl--55ab64b5:13cee442f0c:-7ffa</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-73acaa5e:13cf1eb8548:-71cc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--55ab64b5:13cee442f0c:-7ffb</id>
+  </resource>
+  <enabled>true</enabled>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

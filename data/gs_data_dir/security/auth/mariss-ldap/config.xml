@@ -1,0 +1,12 @@
+<ldap>
+  <id>2b97db76:145e2b880ac:-7e83</id>
+  <name>mariss-ldap</name>
+  <className>org.geoserver.security.ldap.LDAPAuthenticationProvider</className>
+  <serverURL>ldap://localhost:389/dc=mariss,dc=egeos,dc=it</serverURL>
+  <groupSearchBase>ou=groups</groupSearchBase>
+  <groupSearchFilter>memberUid={1}</groupSearchFilter>
+  <useTLS>false</useTLS>
+  <adminGroup>sn-manager</adminGroup>
+  <groupAdminGroup>sn-manager</groupAdminGroup>
+  <userDnPattern>uid={0},ou=people</userDnPattern>
+</ldap>
