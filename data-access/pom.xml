@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gt.version>14.1</gt.version>
+        <gt.version>14-SNAPSHOT</gt.version>
         <spring.version>3.1.4.RELEASE</spring.version>
         <cglib.version>2.2</cglib.version>
         <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
